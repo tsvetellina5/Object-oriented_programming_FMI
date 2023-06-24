@@ -23,18 +23,11 @@ public:
 	friend std::istream& operator>>(std::istream&, NVector& nVector); 
 	friend NVector operator+(const NVector& lhs, const NVector& rhs);
 	friend NVector operator-(const NVector& lhs, const NVector& rhs);
-	friend bool operator||(const NVector& lhs, const NVector& rhs);
 
 private:
 	void copyFrom(const NVector& other);
 	void free();
 };
-
-std::ostream& operator<<(std::ostream&, const NVector& nVector);
-std::istream& operator>>(std::istream&, NVector& nVector);
-
-NVector operator+(const NVector& lhs, const NVector& rhs);
-NVector operator-(const NVector& lhs, const NVector& rhs);
 
 // parallel
 bool operator||(const NVector& lhs, const NVector& rhs);

@@ -12,7 +12,7 @@ bool isBitSet(unsigned char byte, size_t bitIndex) {
 
 void Set::resize(size_t number) {
 	size_t newSize = number / MAX_BITS + 1;
-	unsigned char* temp = new unsigned char[newSize] {};
+	char* temp = new char[newSize] {};
 	if (numbers != nullptr) {
 		memcpy(temp, numbers, size);
 		delete[] numbers;
@@ -117,6 +117,6 @@ void Set::free() {
 
 void Set::copyFrom(const Set& other) {
 	size = other.size;
-	numbers = new unsigned char[size];
+	numbers = new char[size];
 	memcpy(numbers, other.numbers, size);
 }
